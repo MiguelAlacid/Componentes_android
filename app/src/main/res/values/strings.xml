@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">Componentes2</string>
+    <string name="calcular_importe">Calcular importe</string>
+    <string name="incluir_iva">Incluir IVA</string>
+    <string name="daw">DAW</string>
+    <string name="asir">ASIR</string>
+    <string name="dam">DAM</string>
+</resources>

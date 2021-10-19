@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="88dp"
+        android:layout_marginBottom="16dp"
+        android:foreground="@color/textLabel"
+        android:text="MODULO:"
+        app:layout_constraintBottom_toTopOf="@+id/Grupo1"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Switch
+        android:id="@+id/stwIVA"
+        android:layout_width="163dp"
+        android:layout_height="32dp"
+        android:layout_marginStart="120dp"
+        android:layout_marginBottom="324dp"
+        android:checked="false"
+        android:text="@string/incluir_iva"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <RadioGroup
+        android:id="@+id/Grupo1"
+        style="@style/grupBottonCurso"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="44dp"
+        android:layout_marginTop="96dp"
+        android:orientation="vertical"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/nombreAlumno">
+
+        <RadioButton
+            android:id="@+id/radFormaPago1"
+            android:layout_width="131dp"
+            android:layout_height="36dp"
+            android:checked="true"
+            android:onClick="sumaTotal"
+            android:text="@string/dam" />
+
+        <RadioButton
+            android:id="@+id/radFormaPago2"
+            android:layout_width="match_parent"
+            android:layout_height="36dp"
+            android:checked="false"
+            android:onClick="sumaTotal"
+            android:text="@string/daw" />
+
+        <RadioButton
+            android:id="@+id/radFormaPago3"
+            android:layout_width="match_parent"
+            android:layout_height="36dp"
+            android:onClick="sumaTotal"
+            android:text="@string/asir" />
+    </RadioGroup>
+
+    <RadioGroup
+        android:id="@+id/Grupo2"
+        style="@style/grupBottonTurno"
+        android:layout_width="123dp"
+        android:layout_height="109dp"
+        android:layout_marginTop="96dp"
+        android:layout_marginEnd="56dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/nombreAlumno">
+
+        <RadioButton
+            android:id="@+id/turno1"
+            android:layout_width="match_parent"
+            android:layout_height="36dp"
+            android:checked="true"
+            android:onClick="sumaTotal"
+            android:text="Mañana" />
+
+        <RadioButton
+            android:id="@+id/turno2"
+            android:layout_width="match_parent"
+            android:layout_height="36dp"
+            android:onClick="sumaTotal"
+            android:text="Tarde" />
+
+        <RadioButton
+            android:id="@+id/turno3"
+            android:layout_width="match_parent"
+            android:layout_height="36dp"
+            android:onClick="sumaTotal"
+            android:text="Online" />
+    </RadioGroup>
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="96dp"
+        android:text="TURNO:"
+        app:layout_constraintBottom_toTopOf="@+id/Grupo2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/nombreAlumno"
+        app:layout_constraintVertical_bias="0.737" />
+
+    <EditText
+        android:id="@+id/nombreAlumno"
+        android:layout_width="310dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="56dp"
+        android:layout_marginTop="116dp"
+        android:ems="10"
+        android:hint="Nombre"
+        android:inputType="textPersonName"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/lblTotal"
+        android:layout_width="102dp"
+        android:layout_height="48dp"
+        android:layout_marginBottom="4dp"
+        app:layout_constraintBottom_toTopOf="@+id/stwIVA"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

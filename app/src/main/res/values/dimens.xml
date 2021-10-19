@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name = "anchoBtnAceptar" >110</dimen>
+    <dimen name = "anchoBtnCancelar" >120</dimen>
+    <dimen name = "anchoBtn" >100</dimen>
+    <dimen name = "altoBtn" >120</dimen>
+    <dimen name = "imgPerfil" >110</dimen>
+    <dimen name = "tamanioTextError">200</dimen>
+
+</resources>
